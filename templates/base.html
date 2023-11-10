@@ -1,0 +1,156 @@
+{% load static %}
+
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.html' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    {%if user.is_authenticated%}
+        <nav class="navbar navbar-expand-sm " style="background-color: rgb(255, 255, 254);
+        box-shadow:  0 0.6px rgb(143, 143, 143);
+        ">
+
+
+            <div class="items " style=" margin: auto; width: 70%; float: inline-end; margin-left: 1200px; margin-top: -8px;">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color: black; text-decoration: none; font-size: 20px;">
+                        {{user.username}}
+                        </a>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'profile' %}">My Profile</a>
+                        <a class="dropdown-item" href="#">Messages</a>
+                        <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+    <div class="container" >
+        <div id="mySidebar" class="sidebar" style=" height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            /* background-color: rgb(233, 233, 233); */
+            padding-top: 60px;
+            box-shadow: 0 2px 5px rgb(172, 172, 172);
+            background-color: rgb(233, 219, 245);
+            ">
+
+            <div class="div" style="text-align: center; margin-bottom: 10px;">
+                <img src="/static/images/QUVASITY logo.png" class="rounded-circle " alt="Bootstrap" width="90" height="90">
+            </div>
+            <a href="{% url 'home' %}" style="
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #5a5a5a;
+                display: block;">
+                <span><i class="material-icons" style="margin-right: 30px"  >info</i><span class="icon-text" style="vertical-align: middle;"  >Home</span>
+            </a>
+            <br>
+
+            <a href="{% url 'statement' %}" style="
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #5a5a5a;
+            display: block;">
+            <span><i class="material-icons" style="margin-right: 30px"  >info</i><span class="icon-text" style="vertical-align: middle;"  >Statement</span>
+            </a>
+            <br>
+
+            <a href="{% url 'examCard' %}" style="
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #5a5a5a;
+            display: block;">
+            <span><i class="material-icons" style="margin-right: 30px"  >info</i><span class="icon-text" style="vertical-align: middle;"  >Structure</span>
+            </a>
+
+            <a href="{% url 'report' %}" style="
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #5a5a5a;
+                display: block;" >
+                <i class="material-icons" style="margin-right: 30px"  >spa</i><span class="icon-text" style="vertical-align: middle;"  ></span>Reporting</a></span>
+                </a>
+            <br>
+            <a href="{% url 'unitsHistory' %}" style="
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #5a5a5a;
+                display: block;">
+                <i class="material-icons"  style="margin-right: 30px"  >monetization_on</i><span class="icon-text" style="vertical-align: middle;"  ></span>Units History</span></a>
+            <br>
+            <a href="#" style="
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #5a5a5a;
+                display: block;">
+                <i class="material-icons" style="margin-right: 30px"  >email</i><span class="icon-text" style="vertical-align: middle;" ></span>contact<span></a>
+        </div>
+
+
+        <div id="main" style="transition: margin-left 0.5s;
+        padding: 16px;
+        margin-left: 250px;
+
+        " >
+    {% else %}
+        <nav class="navbar bg-body-tertiary " style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.2); background-color: rgb(255, 255, 208)">
+            <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/static/images/QUVASITY logo.png" class="rounded-circle" alt="Bootstrap" width="50" height="50">
+            </a>
+            </div>
+        </nav> 
+    {% endif %}
+
+    {% for msg in messages %}
+        <script >
+            Swal.fire({
+                title: '{{msg}}',
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                }
+            })
+
+        </script>
+    {% endfor %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% block scripts %}
+
+    {% endblock %}
+
+    
+        
+</body>
+</html>

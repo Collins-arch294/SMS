@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row" id="nav">
+            <div class="col-md-12">
+                <h1>Units History </h1>
+                <hr>
+            </div>
+            
+        </div>
+
+        <div id="#title" style="box-shadow: 1px 3px 5px grey ; padding: 20px;" >
+            <p>Program: BACHELOR OF SCIENCE IN COMPUTER SCIENCE</p>
+            <p>Class: SB06/M/2020</p>
+            <p>Session: MAY/2023</p>
+            
+        </div>
+
+        <hr >
+
+        <br>
+
+        <div class="col-md-12" style="box-shadow: 1px 3px 5px grey ; padding: 20px;"  >
+            <h3>Year 1</h3>
+            <p>Year of study</p>
+            <hr>
+
+            <!-- <input type="button" id="getMessage" name="GetMessage" value="GetMessage" onclick="ShowHide()"/>
+            <div id="getMessage" style="display: none;">
+                <p>CMJ 1100-1 COMMUNICATION SKILLS</p>
+                <p>COM 1103-1 INTRODUCTION TO COMPUTERS AND COMPUTING</p>
+                <p>COM 1104-1 COMPUTER NETWORK ESSENTIALS</p>
+                <p>PHY 1162-1 BASIC PHYSICS</p>
+                <p>STA 1103-1 PROBABILITY AND STATISTICS I</p>
+                <p>ZOO 1100-1 HIV/AIDS AND LIFESTYLE DISEASES</p>
+                
+            </div>
+
+            <script>
+                function hide() {
+                   document.getElementById('getMessages').style.display = 'none'
+                }
+                function show() {
+                    document.getElementById('getMessages').style.visibility = 'visible';
+                }
+             </script> -->
+             <button class="btn bg-transparent " onclick="myFunction()">Semister 1</button>
+             <div id = "div" style="display:none;">
+                
+                <hr>
+                <p>CMJ 1100-1 COMMUNICATION SKILLS</p>
+                <p>COM 1103-1 INTRODUCTION TO COMPUTERS AND COMPUTING</p>
+                <p>COM 1104-1 COMPUTER NETWORK ESSENTIALS</p>
+                <p>PHY 1162-1 BASIC PHYSICS</p>
+                <p>STA 1103-1 PROBABILITY AND STATISTICS I</p>
+                <p>ZOO 1100-1 HIV/AIDS AND LIFESTYLE DISEASES</p>
+             </div>
+             
+             
+             <!-- <div class="sem2" style="display:none;">
+                
+                <p>COM 1200-1 COMPUTER AND INFORMATION LITERACY</p>
+                <p>COM 1205-1 COMPUTER ARCHITECTURE AND ORGANIZATION</p>
+                <p>COM 1206-1 MULTIMEDIA TECHNOLOGIES</p>
+                <p>COM 1207-1 INTERNET PROGRAMMING</p>
+                <p>COM 1208-1 PROCEDURAL PROGRAMMING</p>
+                <p>COM 1209-1 DISCRETE STRUCTURES</p>
+                <p>MAT 1206-1 DIFFERENTIAL CALCULUS</p>
+                <p>PHY 1263-1 INTRODUCTION TO DIGITAL ELECTRONICS</p>
+
+             </div>
+             <button class="btn bg-transparent " onclick="myFunc()">Semister 2</button>  -->
+
+             <script>
+                function myFunction() {
+                    document.getElementById("div").style.display = "block";
+                    
+                }
+                // function myFunc() {
+                //     document.getElementById("sem2").style.display = "block";
+                    
+                // }
+
+                
+             </script>
+        </div>
+        
+    </div>
+{% endblock %}
+

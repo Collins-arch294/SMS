@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h2>Reporting</h2>
+        <h4>My Reporting History</h4>
+        <hr>
+
+        <div class="button" style="text-align: right; margin-bottom: 10px; margin: 20px;">
+            
+              <button type="submit" class="btn btn-primary rounded"  >Report Now</button>
+           
+        </div>
+        
+        <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Semister</th>
+                <th>Date reported</th>
+                <th>Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for report in reports %}
+                <tr>
+                  <td> {{forloop.counter}} </td>
+                  <td>{{report.semester}}</td>
+                  <td>{{report.date_reported}}</td>
+                  <td> {{report.type}} </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+
+
+    </div>
+
+{% endblock %}

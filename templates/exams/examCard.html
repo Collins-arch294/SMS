@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="upper" style="display: flex; justify-content: space-between; margin-top: 10px; padding: 20px; box-shadow: 1px 3px 5px grey" >
+            <div class="name">
+                <h5>Current Exam Card</h5>
+                <p>Show exam card for current semister</p>
+            </div>
+            <div class="download" >
+                <button class="btn btn-primary" > <i class="fa fa-download" aria-hidden="false">Download</i> </button>
+            </div>
+        </div>
+        <hr>
+
+        <div class="container">
+            <div class="examCard" style="box-shadow: 1px 3px 5px grey; padding: 20px; ">
+                <div class="info">
+                    <p>NAME: ALICE NJOKI KAMUYU</p>
+                    <p>ADMISSION : SB06/SR/MN/11545/2020</p>
+                    <p>COURSE: COMPUTER SCIENCE</p>
+                    <p>YEAR:1 SEMISTER:2 <p>
+                    <p>Printed at 20/06/2023 at 3:00pm</p>
+                </div>
+            <hr>
+                <div class="units">
+                    <p>COM 1200-1 COMPUTER AND INFORMATION LITERACY</p>
+                    <p>COM 1205-1 COMPUTER ARCHITECTURE AND ORGANIZATION</p>
+                    <p>COM 1206-1 MULTIMEDIA TECHNOLOGIES</p>
+                    <p>COM 1207-1 INTERNET PROGRAMMING</p>
+                    <p>COM 1208-1 PROCEDURAL PROGRAMMING</p>
+                    <p>COM 1209-1 DISCRETE STRUCTURES</p>
+                    <p>MAT 1206-1 DIFFERENTIAL CALCULUS</p>
+                    <p>PHY 1263-1 INTRODUCTION TO DIGITAL ELECTRONICS</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

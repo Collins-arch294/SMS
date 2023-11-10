@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container">
+        <div class="edit" style="margin: auto; width: 70%; box-shadow:0 2px 5px rgb(172, 172, 172); padding: 20px;">
+            <form enctype="multipart/form-data" method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Profile Info</legend>
+                        {{u_form|crispy}}
+                        <!-- {{ p_form|crispy}} -->
+                        
+                </fieldset>
+                <button class="btn btn-outline-info"  type="submit">submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row" id="nav">
+            <div class="col-md-12">
+                <h1>Register Units </h1>
+                <hr>
+            </div>
+            
+        </div>
+        {% for reports in report %}
+        <div id="#title" style="box-shadow: 1px 3px 5px grey ; padding: 20px;" >
+            <p>Program: {{profile.course}}</p>
+            <p>Class: SB06/M/2020</p>
+            <p>Session: MAY/2023</p>
+            <p >Unit Registration: <a href="" style="background-color: rgb(148, 199, 73); padding: 6px; border-radius: 8px; color: rgb(232, 235, 238); text-decoration: none; ">Open</a>  Reported Status: <a href="#" style="background-color: rgb(223, 85, 85); color: aliceblue; padding: 6px; border-radius: 8px; text-decoration: none; ">{{reports.type}} </a>  </p> 
+        </div>
+        {% endfor %}
+        <br>
+
+        <hr >
+
+        <br>
+
+        <div class="register" style="box-shadow: 1px 3px 5px grey ; padding: 30px; margin-bottom: 20px;">
+            <p >Semister 1</p>
+            <hr>
+            <div class="inputs" id="navs">
+                <p><input type = "checkbox"> COM 3123-1 RESEARCH METHODS</p>
+                <p><input type = "checkbox"> COM 3124-1 COMPUTER GRAPHICS</p>
+                <p><input type = "checkbox"> COM 3125-1 OBJECT ORIENTED PROGRAMMING II</p>
+                <p><input type="checkbox"> COM 3127-1 MOBILE COMMUNICATION</p>
+                <p><input type="checkbox"> COM 3128-1 DATA COMMUNICATION</p>
+                <p><input type="checkbox"> COM 3129-1 DESIGN AND ANALYSIS OF ALGORITHMS</p>
+                <p><input type="checkbox"> PHY 3119-1 ELECTRONICS 1</p>
+                <div class="button" id="btn" style="text-align: right; " ><button  class="btn btn-primary"> Register Units </button></div>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+{% endblock %}
+{% block scripts %}
+    <script>
+        $("#btn").click(function(e){
+            e.preventDefault();
+            $(".toggle").hide();
+            var toShow = $(this).attr('#navs');
+            $(toShow).show();
+        });
+    </script>
+{% endblock %}

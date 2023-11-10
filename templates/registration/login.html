@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+   <!-- <nav class="navbar bg-body-tertiary " style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.2); background-color: rgb(255, 255, 208)">
+        <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="/static/images/QUVASITY logo.png" class="rounded-circle" alt="Bootstrap" width="50" height="50">
+        </a>
+        </div>
+    </nav>  -->
+    <div class="login" id="loginform" style="margin: 
+                                            auto; width: 30%; 
+                                            box-shadow: 0 2px 4px rgb(156, 156, 156);
+                                            justify-content: center;
+                                            align-items: center;
+                                            text-align: center;
+                                            padding: 20px;
+                                            margin-top: 50px;">
+        <h2 style="text-align: start; padding-left: 30px;">Login</h2>
+   
+        <form method="POST" class="form" >
+            {% csrf_token %}
+            
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+            
+            <p class="loginlook">
+                {{ form.as_p}}
+            </p>
+            
+            <button class='btn btn-primary' type="submit">Login</button>
+            
+            <p class=" forme" style="margin-top: 5px;">Don't have an account? <a href="{% url 'signup' %}">signup</a></p>
+        </form>
+    </div>
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
+        swal("Hello world!");
+    </script> -->
+
+{% endblock %}

@@ -1,0 +1,121 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Landing page</title>
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary " style="box-shadow: 0 2px 4px 0 rgba(0,0,0,.2); background-color: rgb(255, 255, 208);">
+        <div class="container">
+          <!-- <a class="navbar-brand" href="#">
+            <img src="/static/images/QUVASITY logo.png" class="rounded-circle" alt="Bootstrap" width="50" height="50">
+          </a> -->
+        </div>
+    </nav>
+    <!-- <nav class="navbar ">
+        <img src="/static/images/QUVASITY UNIVERSITY.png" alt="" width="110px" height="90px" class="rounded-circle">
+    </nav> -->
+    
+    <div class="container">
+        <div id="carousel-example-1z" class="carousel slide carousel-fade mb-5 mt-5 w-100" data-ride="carousel" style="margin: auto; width: 70%;">
+          <!--Indicators-->
+          <ol class="carousel-indicators">
+              <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+              <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+              <li data-target="#carousel-example-1z" data-slide-to="3"></li>
+              <li data-target="#carousel-example-1z" data-slide-to="4"></li>
+          </ol>
+          <!--/.Indicators-->
+          <!--Slides-->
+          <div class="carousel-inner" role="listbox">
+              <!--First slide-->
+              <div class="carousel-item active">
+                  <img class="d-block w-100  " data-mdb-interval="10000" src="/static/images/laptop.jpg" alt="First slide" height="450px">
+              </div>
+              <!--/First slide-->
+              
+  <!--Second slide-->
+              <div class="carousel-item">
+                  <img class="d-block w-100" data-mdb-interval="2000" src="/static/images/inlibrary.jpg" alt="Second slide" height="450px">
+              </div>
+              <!--/Second slide-->
+              <!--Third slide-->
+              <div class="carousel-item">
+                  <img class="d-block w-100" data-mdb-interval="2000" src="/static/images/group.jpg" alt="Third slide" height="450px">
+              </div>
+              <!--/Third slide-->
+              <!-- fourth slide -->
+              <div class="carousel-item">
+                <img class="d-block w-100" data-mdb-interval="2000" src="/static/images/hall.jpg" alt="Fourth slide" height="450px">
+              </div>
+            <!-- fourth slide -->
+            <!-- fifth slide -->
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/static/images/image2.jpg" alt="Fifth slide" height="450px">
+          </div>
+
+          <!--Second slide-->
+          <div class="carousel-item">
+            <img class="d-block w-100" data-mdb-interval="2000" src="/static/images/inlibrary.jpg" alt="Second slide" height="450px">
+        </div>
+        <!--/Second slide-->
+        <!--Third slide-->
+        <div class="carousel-item">
+            <img class="d-block w-100" data-mdb-interval="2000" src="/static/images/group.jpg" alt="Third slide" height="450px">
+        </div>
+        <!--/Third slide-->
+        <!-- fourth slide -->
+        <div class="carousel-item">
+          <img class="d-block w-100" data-mdb-interval="2000" src="/static/images/hall.jpg" alt="Fourth slide" height="450px">
+        </div>
+      <!-- fourth slide -->
+      <!-- fifth slide -->
+        <div class="carousel-item">
+            <img class="d-block w-100" src="/static/images/image2.jpg" alt="Fifth slide" height="450px">
+        </div>
+
+          </div>
+          <!--/.Slides-->
+          <!--Controls-->
+          <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+          <!--/.Controls-->
+      </div>
+
+      <div class="info" style="margin: auto; width: 70%; margin-top: 10px; margin-bottom: 10px; padding-left: 30px;">
+        <h1 style="text-align: center;">Welcome to Quvasity Students Portal</h1>
+        <p style="text-align: center;">Where we offer quality education to all our students all over the world </p>
+      </div>
+      <!-- <div class="buttons" style="margin: auto;
+                                width: 80%;
+                                display: flex;
+                                padding-left: 30px;
+                                justify-content: space-between;
+                                padding: 20px;
+                                margin-bottom: 60px;
+                                
+                                "> -->
+        <div class="login " style="margin: auto; width: 40%; display: flex; padding-left: 20px; justify-content: center; margin-bottom: 40px;">
+            <button type="submit" class="btn btn-primary" style="margin-right: 30px;" onclick="window.location.href='/login/'; " >  learn more</button>
+            
+        </div>
+        
+      <!-- </div> -->
+    </div>
+
+</body>
+</html>

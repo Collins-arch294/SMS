@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="upper" style="display: flex; justify-content: space-between;" >
+            <div class="name">
+                <h5>Fees Statement</h5>
+                <p>History of fees</p>
+                
+            </div>
+        
+            <div class="download">
+                <button class="btn"><i class="fa fa-download"></i> Download</button>
+            </div> 
+        </div>
+        <hr style="padding-top: 2px;">
+        
+
+        <div class="info" style="text-align: center;">
+            <img src="/static/images/QUVASITY logo.png" alt="" width="130px" height="130px" style="padding-bottom: 10px;">
+            <h2>QUVASITY UNIVERSITY</h2>
+            <p>PO.BOX 277-23563, NEWTON</p>
+            <p>Tel:023-1276378</p>
+            <p>Email: info@vasity.ac.ke</p>
+            <h3>Fees Statement</h3>
+            
+        </div>
+        <hr style="background-color: black; height: 3px;">
+
+        <div class="fees">
+            <p>STUDENT NAME : KAMUYU ALICE NJOKI</p>
+            <P>COURSE : COMPUTER SCIENCE</P>
+            <P>COURSE : PURE,HEALTH AND APPLIED SCIENCES</P>
+            <P>TYPE : GSSP</P>
+        </div>
+
+        <h3>SEMESTER 2 2020/2021</h3>
+        <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Date</th>
+                <th>Ref</th>
+                <th>Decription</th>
+                <th>Debit(Kes)</th>
+                <th>Credit(Kes)</th>
+                <th>Balance(Kes)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- for report in reports  -->
+              <!-- forloop.counter -->
+                <tr>
+                  <td> 1 </td>
+                  <td> 01/02/2023 </td>
+                  <td> 	SFI161689 </td>
+                  <td> Equity KUCCPS </td>
+                  <td> 25,050</td>
+                  <td>0.00</td>
+                  <td>0.00</td>
+                </tr>
+              <!-- endfor  -->
+
+              
+            </tbody>
+          </table>
+
+          <h3>SEMESTER 3 2020/2021</h3>
+          <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Date</th>
+                  <th>Ref</th>
+                  <th>Decription</th>
+                  <th>Debit(Kes)</th>
+                  <th>Credit(Kes)</th>
+                  <th>Balance(Kes)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- for report in reports  -->
+                <!-- forloop.counter -->
+                  <tr>
+                    <td> 1 </td>
+                    <td> 01/02/2023 </td>
+                    <td> 	SF2161689 </td>
+                    <td> COOPERATIVE BANK </td>
+                    <td> 12,000</td>
+                    <td>0.00</td>
+                    <td>7.100</td>
+                  </tr>
+                <!-- endfor  -->
+  
+                
+              </tbody>
+              <tr>
+                <td> 2 </td>
+                <td> 01/02/2023 </td>
+                <td> 	SF2161689 </td>
+                <td> COOPERATIVE BANK </td>
+                <td> 7,100</td>
+                <td>0.00</td>
+                <td>0.00</td>
+              </tr>
+            <!-- endfor  -->
+
+            
+          </tbody>
+            </table>
+
+
+    </div>
+
+{% endblock %}
